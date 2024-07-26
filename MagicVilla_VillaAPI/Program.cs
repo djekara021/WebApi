@@ -1,6 +1,7 @@
 //using Serilog;
 
 
+using MagicVilla_VillaAPI;
 using MagicVilla_VillaAPI.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,7 +28,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 				 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection")));
-
+builder.Services.AddAutoMapper(typeof(MappingConfig));
 
 var app = builder.Build();
 
