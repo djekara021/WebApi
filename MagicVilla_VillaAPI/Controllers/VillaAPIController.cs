@@ -220,7 +220,7 @@ namespace MagicVilla_VillaAPI.Controllers
 		[HttpPatch("int:id", Name = "UpdatePartialVilla")]
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
-		public async Task<IActionResult> UpdatePartialVila(int id,JsonPatchDocument<VillaUpdateDTO> patchDTO)
+		public async Task<ActionResult<APIResponse>> UpdatePartialVila(int id,JsonPatchDocument<VillaUpdateDTO> patchDTO)
 		{
 
 			try
@@ -263,9 +263,10 @@ namespace MagicVilla_VillaAPI.Controllers
 				{
 					ex.ToString()
 				};
-
+				
 			}
 			return _response;
+
 		}
 
 
