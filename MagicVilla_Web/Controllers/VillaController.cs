@@ -22,7 +22,7 @@ namespace MagicVilla_Web.Controllers
 
 
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> IndexVilla()
 		{
 			List<VillaDTO> list = new();
 
