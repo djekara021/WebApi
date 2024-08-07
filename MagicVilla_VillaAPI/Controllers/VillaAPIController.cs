@@ -58,8 +58,9 @@ namespace MagicVilla_VillaAPI.Controllers
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		//[ProducesResponseType(200, Type=typeof(VillaDTO))]
 		//[ProducesResponseType(404)]//solving undocumented in swagger
-		[HttpGet("int:id",Name ="GetVilla")]
-		public async Task<ActionResult<APIResponse>> GetVillaAsync(int id)
+		//[HttpGet("{id}")]
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<APIResponse>> GetVilla(int id)
 		{
 			try
 			{
